@@ -2,30 +2,35 @@ import { useRef } from "react"
 import "./portfolio.scss"
 import { motion, useScroll, useSpring, useTransform } from "framer-motion"
 
+const goToGitHubRepo = () => {
+    const githubRepoUrl = 'https://github.com/Kaarthi2004?tab=repositories';
+    window.open(githubRepoUrl, '_blank');
+};
+
 const items = [
     {
         id:1,
-        title:"React Commerce",
+        title:"YOLO-DEEPSORT",
         img:"https://images.pexels.com/photos/3103199/pexels-photo-3103199.jpeg?auto=compress&cs=tinysrgb&w=600",
-        desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci amet quam, ut minus veniam velit autem et dignissimos dolorum reiciendis eligendi expedita necessitatibus voluptatem dolore. Placeat tempora ut ullam in.",
+        desc:"This project uses YOLOv8 for Vehicle Speed detection and DEEPSORT for vehicle tracking. It implements the following tasks such as: 1.Vehicle Detection 2.Vehicle Speed Estimation 3.Vechile Count",
     },
     {
         id:2,
-        title:"Next js",
+        title:"Dark Web Crawler",
         img:"https://images.pexels.com/photos/806609/pexels-photo-806609.jpeg?auto=compress&cs=tinysrgb&w=600",
-        desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci amet quam, ut minus veniam velit autem et dignissimos dolorum reiciendis eligendi expedita necessitatibus voluptatem dolore. Placeat tempora ut ullam in.",
+        desc:"Python web crawler that searches for and extracts '.onion' links from a given parent URL. It makes HTTP requests with the requests library, parses HTML content with BeautifulSoup, and configures a SOCKS5 proxy with PySocks to connect to the Tor network.",
     },
     {
         id:3,
-        title:"Vannila cSS",
+        title:"Temple Website",
         img:"https://images.pexels.com/photos/2582938/pexels-photo-2582938.jpeg?auto=compress&cs=tinysrgb&w=600",
-        desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci amet quam, ut minus veniam velit autem et dignissimos dolorum reiciendis eligendi expedita necessitatibus voluptatem dolore. Placeat tempora ut ullam in.",
+        desc:"I developed a temple website using ReactJS and TailwindCSS, enabling donation handling and special event announcements. This project showcases my skills in creating dynamic, user-friendly web applications with efficient design and responsive features.",
     },
     {
         id:4,
-        title:"Music App",
+        title:"AccidentPreventionIoT",
         img:"https://images.pexels.com/photos/5935787/pexels-photo-5935787.jpeg?auto=compress&cs=tinysrgb&w=600",
-        desc:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci amet quam, ut minus veniam velit autem et dignissimos dolorum reiciendis eligendi expedita necessitatibus voluptatem dolore. Placeat tempora ut ullam in.",
+        desc:"Developed an IoT-based alert system for accident-prone areas on national highways using Raspberry Pi, Arduino UNO, radar sensors, and cameras to detect speeding vehicles and alert drivers, aiming to reduce accidents at T and Y-junctions.",
     },
 ]
 
@@ -47,7 +52,7 @@ const Single = ({item}) => {
                     <motion.div className="textContainer" style={{y}}>
                         <h2>{item.title}</h2>
                         <p>{item.desc}</p>
-                        <button>See Demo</button>
+                        <button onClick={goToGitHubRepo}>See Demo</button>
                     </motion.div>
                 </div>
             </div>

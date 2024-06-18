@@ -2,6 +2,11 @@ import { useRef } from "react";
 import "./services.scss"
 import { motion, useInView} from "framer-motion";
 
+const goToGitHubRepo = () => {
+    const githubRepoUrl = 'https://github.com/Kaarthi2004?tab=repositories';
+    window.open(githubRepoUrl, '_blank');
+};
+
 const variants = {
     initial : {
         x:-500,
@@ -48,36 +53,32 @@ const Services = () =>{
             </motion.div>
             <motion.div className="listContainer" variants={variants}>
                 <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
-                    <h2>About Me:</h2>
+                    <h2>Data Structures:</h2>
                     <p>
-                        An Assertive person who would like to be committed and efficient in my work and to 
-                        enhance the growth of the organization by improving and applying my competency at work
+                        Passionate about data structures, I constantly explore their applications and innovations, aiming to optimize algorithms for efficient problem-solving.
                     </p>
-                    <button>Go</button>
+                    <button onClick={goToGitHubRepo}>See Demo</button>
                 </motion.div>
                 <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
-                    <h2>About Me:</h2>
+                    <h2>Web Development:</h2>
                     <p>
-                        An Assertive person who would like to be committed and efficient in my work and to 
-                        enhance the growth of the organization by improving and applying my competency at work
+                        Deeply interested in web development, I’ve learned React JS and TailwindCSS to create modern, efficient, and visually appealing web applications.
                     </p>
-                    <button>Go</button>
+                    <button onClick={goToGitHubRepo}>See Demo</button>
                 </motion.div>
                 <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
-                    <h2>About Me:</h2>
+                    <h2>UI/UX:</h2>
                     <p>
-                        An Assertive person who would like to be committed and efficient in my work and to 
-                        enhance the growth of the organization by improving and applying my competency at work
+                        Knowledgeable in UI/UX laws, adept with Figma, and capable of designing effective wireframes and prototypes to improve user interaction.
                     </p>
-                    <button>Go</button>
+                    <button onClick={goToGitHubRepo}>See Demo</button>
                 </motion.div>
                 <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
-                    <h2>About Me:</h2>
+                    <h2>Machine Learning:</h2>
                     <p>
-                        An Assertive person who would like to be committed and efficient in my work and to 
-                        enhance the growth of the organization by improving and applying my competency at work
+                        Self-learned expert in YOLO algorithm, experienced in building machine learning models for multiple real-world use cases.
                     </p>
-                    <button>Go</button>
+                    <button onClick={goToGitHubRepo}>See Demo</button>
                 </motion.div>
             </motion.div>
         </motion.div>
